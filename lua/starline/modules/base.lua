@@ -28,4 +28,13 @@ M.mode = function()
   return string.format(" %s ", modes[current_mode]):upper()
 end
 
+M.filename = function()
+  local fname = vim.fn.expand "%:t"
+  if fname == "" then
+    return ""
+  end
+
+  return fname .. " "
+end
+
 return M

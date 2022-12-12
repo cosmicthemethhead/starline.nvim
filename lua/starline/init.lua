@@ -1,12 +1,14 @@
 Starline = { }
 
-local mod_mode = require("starline.modules.mode")
+local base = require("starline.modules.base")
 local refresh_ignore = {"NvimTree"}
 
 Starline.refresh = function()
   return table.concat {
     "%#Statusline#",
-    mod_mode.mode(),
+    base.mode(),
+    "> ",
+    base.filename(),
   }
 end
 
