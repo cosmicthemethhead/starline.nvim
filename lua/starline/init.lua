@@ -1,9 +1,11 @@
 M = { }
 
+local mod_mode = require("starline.modules.mode")
+
 M.refresh = function()
   return table.concat {
     "%#Statusline#",
-    " Hello, World!",
+    mod_mode.mode(),
   }
 end
 
