@@ -9,6 +9,9 @@ Starline.refresh = function()
     base.mode(),
     "> ",
     base.filename(),
+
+    "%=%#StatusLineExtra#",
+    " %P %l:%c ",
   }
 end
 
